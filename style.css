@@ -1,5 +1,10 @@
 html {
   scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 body {
@@ -57,7 +62,7 @@ body {
 /* dito home */
 #Home {
   height: 100vh;
-  width: 80%;
+  width: 100%;
   background-color: #f3f8f3;
   display: flex;
   flex-direction: column;
@@ -199,6 +204,7 @@ video {
   height: 200px;
   border-radius: 12px;
   object-fit: cover;
+  max-width: 100%;
 }
 
 .menu-info {
@@ -237,7 +243,8 @@ video {
 .Customer-reviews {
   padding: 80px 10%;
   background-color: #fefffe;
-  width: 80%;
+  width: 100%;
+  max-width: 100%;
 }
 
 .Customer-container {
@@ -269,6 +276,7 @@ video {
   box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);
   padding: 10px;
   border-radius: 12px;
+  max-width: 100%;
 }
 
 .Customer-image img {
@@ -278,6 +286,7 @@ video {
   object-fit: cover;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
+  max-width: 100%;
 }
 
 .Customer-image img:hover {
@@ -364,6 +373,7 @@ video {
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
   padding: 10px;
   border-radius: 12px;
+  max-width: 100%;
 }
 
 .card {
@@ -373,6 +383,7 @@ video {
   border: 2px solid rgb(226, 231, 226);
   width: 220px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
 }
 
 .card h3 {
@@ -536,7 +547,7 @@ video {
   
   .Customer-reviews {
     padding: 40px 5%;
-    width: 90%;
+    width: 100%;
   }
 
   .Customer-container {
@@ -551,6 +562,8 @@ video {
   .Customer-image-grid {
     grid-template-columns: 1fr;
     justify-items: center;
+    flex: none;
+    width: 100%;
   }
 
   .Customer-image img {

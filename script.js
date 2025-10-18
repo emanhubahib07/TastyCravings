@@ -1,8 +1,6 @@
-<script>
-  const toggle = document.getElementById('menu-toggle');
-  const nav = document.querySelector('.navbar-right');
-  
-  toggle.addEventListener('click', () => {
-    nav.classList.toggle('active');
-  });
-</script>
+const menuToggle = document.getElementById('menu-toggle');
+const navbarRight = document.getElementById('navbar-right');
+
+menuToggle.addEventListener('click', () => {
+  navbarRight.classList.toggle('active');
+});

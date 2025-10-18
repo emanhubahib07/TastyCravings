@@ -13,6 +13,7 @@ body {
   background: #2d5128;
   color: #333;
   scroll-behavior: smooth;
+  overflow-x: hidden; /* Prevents horizontal overflow */
 }
 
 .navbar {
@@ -25,6 +26,7 @@ body {
   top: 0;
   z-index: 10;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  max-width: 100vw; /* Ensure navbar doesn't exceed viewport */
 }
 
 .logo {
@@ -40,6 +42,7 @@ body {
 .logo img {
   height: 35px;
   width: auto;
+  max-width: 100%;
 }
 
 .navbar-right a {
@@ -69,6 +72,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  max-width: 100vw;
 }
 
 .main-title {
@@ -141,6 +145,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  max-width: 100vw;
 }
 
 .Title-promo {
@@ -156,6 +161,7 @@ video {
   height: auto;
   border-radius: 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  max-width: 100%;
 }
 
 /* Nandito Menu Section */
@@ -165,6 +171,7 @@ video {
   color: #fefffe;
   text-align: center;
   border-radius: 0;
+  max-width: 100vw;
 }
 
 #Menu h2 {
@@ -205,11 +212,13 @@ video {
   border-radius: 12px;
   object-fit: cover;
   max-width: 100%;
+  flex-shrink: 0;
 }
 
 .menu-info {
   flex: 1;
   text-align: left;
+  min-width: 0; /* Allows flex item to shrink */
 }
 
 .menu-header {
@@ -244,7 +253,8 @@ video {
   padding: 80px 10%;
   background-color: #fefffe;
   width: 100%;
-  max-width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
 }
 
 .Customer-container {
@@ -253,12 +263,14 @@ video {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 60px;
+  max-width: 100%;
 }
 
 .Customer-reviews-front {
   flex: 1;
   font-family: Arial, Helvetica, sans-serif;
   color: #070003;
+  min-width: 250px;
 }
 
 .Customer-reviews-front h2 {
@@ -277,6 +289,7 @@ video {
   padding: 10px;
   border-radius: 12px;
   max-width: 100%;
+  width: 100%;
 }
 
 .Customer-image img {
@@ -287,6 +300,7 @@ video {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
   max-width: 100%;
+  height: auto;
 }
 
 .Customer-image img:hover {
@@ -297,6 +311,8 @@ video {
 .Information {
   padding: 60px 10%;
   background-color: #cce8b7;
+  max-width: 100vw;
+  box-sizing: border-box;
 }
 
 .Information-container {
@@ -305,6 +321,7 @@ video {
   justify-content: space-between;
   flex-wrap: wrap; 
   gap: 40px;
+  max-width: 100%;
 }
 
 .Information-image img {
@@ -313,6 +330,7 @@ video {
   border-radius: 15px;
   object-fit: cover;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  height: auto;
 }
 
 .Information-text {
@@ -362,6 +380,7 @@ video {
   justify-content: center;
   align-items: center;
   text-align: center;
+  max-width: 100vw;
 }
 
 .card-container {
@@ -374,6 +393,7 @@ video {
   padding: 10px;
   border-radius: 12px;
   max-width: 100%;
+  width: 100%;
 }
 
 .card {
@@ -384,6 +404,7 @@ video {
   width: 220px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 100%;
+  flex: 1 1 auto;
 }
 
 .card h3 {
@@ -401,6 +422,7 @@ video {
   justify-content: center;
   align-items: center;
   text-align: center;
+  max-width: 100vw;
 }
 
 .Contact-Intro{
@@ -414,6 +436,8 @@ video {
   text-align: center;
   gap: 50px; 
   margin-top: 40px;
+  flex-wrap: wrap;
+  max-width: 100%;
 }
 
 .Contact-item {
@@ -422,6 +446,8 @@ video {
   align-items: center;
   color: #000;
   font-size: 14px;
+  flex: 1 1 auto;
+  min-width: 120px;
 }
 
 .Contact-item i {
@@ -448,6 +474,7 @@ video {
   justify-content: center;
   align-items: center;
   text-align: center;
+  max-width: 100vw;
 }
 
 .Footer-message{
@@ -661,4 +688,14 @@ video {
   .Contact-item {
     font-size: 11px;
   }
+
+  .Customer-image-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .Customer-image img {
+    width: 100%;
+    height: auto;
+  }
 }
+

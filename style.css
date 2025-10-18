@@ -577,3 +577,50 @@ video {
   }
 }
 
+/* Default hidden sa desktop */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #0f990f;
+}
+
+/* Show sa mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .navbar-right {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #ffffff;
+    text-align: left;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+  }
+
+  .navbar-right.active {
+    display: flex;
+  }
+
+  .navbar-right a {
+    padding: 10px 20px;
+    display: block;
+    margin: 5px 0;
+    color: #0f990f;
+  }
+
+  .navbar-right a:hover {
+    background: #41f878;
+    color: white;
+    border-radius: 8px;
+  }
+}
+
+

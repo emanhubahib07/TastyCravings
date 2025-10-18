@@ -1,3 +1,4 @@
+/* RESET & GLOBAL SETTINGS */
 * {
   box-sizing: border-box;
 }
@@ -12,15 +13,17 @@ body {
   font-family: "Poppins", Arial, sans-serif;
   background: #2d5128;
   color: #333;
-  overflow-x: hidden;
+  overflow-x: hidden; /* FIX horizontal overflow */
   scroll-behavior: smooth;
 }
 
 img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
+/* NAVBAR */
 .navbar {
   background: #ffffff;
   padding: 15px 40px;
@@ -65,7 +68,6 @@ img {
   border-radius: 20px;
 }
 
-
 .menu-toggle {
   display: none;
   font-size: 26px;
@@ -73,6 +75,7 @@ img {
   color: #0f990f;
 }
 
+/* HOME */
 #Home {
   height: 100vh;
   width: 100%;
@@ -105,7 +108,6 @@ img {
   animation-delay: 0.4s;
 }
 
-
 @keyframes slidePop {
   from {
     opacity: 0;
@@ -136,14 +138,16 @@ img {
   transform: translateY(-3px);
 }
 
+/* PROMOTIONAL */
 #Promotional {
-  height: 100vh;
+  min-height: 100vh;
   background-color: #9ec188;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 40px 20px;
 }
 
 .Title-promo {
@@ -154,19 +158,18 @@ img {
 }
 
 video {
-  width: 90%;
+  width: 100%;
   max-width: 900px;
-  height: auto;
   border-radius: 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
+/* MENU */
 #Menu {
   background: #5e914b;
   padding: 60px 20px;
   color: #fefffe;
   text-align: center;
-  border-radius: 0;
 }
 
 #Menu h2 {
@@ -241,10 +244,12 @@ video {
   line-height: 1.4;
 }
 
+/* CUSTOMER REVIEWS */
 .Customer-reviews {
-  padding: 80px 10%;
+  padding: 80px 5%;
   background-color: #fefffe;
-  width: 80%;
+  width: 100%; /* FIXED */
+  overflow-x: hidden;
 }
 
 .Customer-container {
@@ -265,15 +270,16 @@ video {
   flex: 1.5;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 25px;
-  justify-items: end;
-  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);
+  gap: 25px;
+  justify-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   padding: 10px;
   border-radius: 12px;
 }
 
 .Customer-image img {
-  width: 280px;
+  width: 100%;
+  max-width: 280px;
   height: 180px;
   border-radius: 15px;
   object-fit: cover;
@@ -285,9 +291,11 @@ video {
   transform: scale(1.05);
 }
 
+/* INFORMATION */
 .Information {
-  padding: 60px 10%;
+  padding: 60px 5%;
   background-color: #cce8b7;
+  overflow-x: hidden;
 }
 
 .Information-container {
@@ -317,8 +325,9 @@ video {
   font-weight: 700;
 }
 
+/* WHY CHOOSE US */
 #WhyChooseUs {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-color: #5e914b;
   color: #222;
@@ -327,15 +336,14 @@ video {
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 40px 20px;
 }
 
 .card-container {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
   flex-wrap: wrap;
   gap: 20px;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
   padding: 10px;
   border-radius: 12px;
 }
@@ -353,8 +361,9 @@ video {
   margin-bottom: 10px;
 }
 
+/* CONTACT */
 #Contact {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-color: #fdfdfc;
   color: #222;
@@ -363,6 +372,7 @@ video {
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 50px 20px;
 }
 
 .Contact-container {
@@ -371,6 +381,7 @@ video {
   text-align: center;
   gap: 50px;
   margin-top: 40px;
+  flex-wrap: wrap;
 }
 
 .Contact-item {
@@ -386,8 +397,9 @@ video {
   margin-bottom: 8px;
 }
 
+/* FOOTER */
 #Footer {
-  height: 10vh;
+  height: auto;
   width: 100%;
   background-color: #0f990f;
   color: #222;
@@ -396,6 +408,7 @@ video {
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 20px;
 }
 
 .Footer-message {
@@ -403,6 +416,7 @@ video {
   font-size: small;
 }
 
+/* MEDIA QUERIES */
 @media (max-width: 768px) {
   .navbar {
     padding: 10px 20px;
@@ -424,10 +438,6 @@ video {
     display: flex;
   }
 
-  .logo {
-    font-size: 18px;
-  }
-
   #Home,
   #Promotional,
   #Contact {
@@ -435,43 +445,13 @@ video {
     padding: 50px 20px;
   }
 
-  .main-title {
-    font-size: 2rem;
-  }
-
-  .sub-title {
-    font-size: 1rem;
-  }
-
-  .menu-button {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-  }
-
   .menu-card {
     flex-direction: column;
     text-align: center;
-    padding: 15px;
-  }
-
-  .menu-card img {
-    width: 150px;
-    height: 150px;
-  }
-
-  .Customer-reviews {
-    padding: 40px 5%;
-    width: 90%;
-  }
-
-  .Customer-container {
-    flex-direction: column;
-    gap: 30px;
   }
 
   .Customer-image-grid {
     grid-template-columns: 1fr;
-    justify-items: center;
   }
 
   .Information-container {
@@ -483,21 +463,6 @@ video {
     flex-direction: column;
     align-items: center;
   }
-
-  .card {
-    width: 100%;
-    max-width: 300px;
-  }
-
-  .Contact-container {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  #Footer {
-    height: auto;
-    padding: 20px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -507,18 +472,5 @@ video {
 
   .sub-title {
     font-size: 0.9rem;
-  }
-
-  .menu-card img {
-    width: 120px;
-    height: 120px;
-  }
-
-  .Customer-image img {
-    max-width: 220px;
-  }
-
-  .card {
-    max-width: 260px;
   }
 }

@@ -113,7 +113,13 @@ body {
   background-color: #41f878;
   transform: translateY(-3px);
 }
-
+video {
+  width: 90%;
+  max-width: 900px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
 /* === Responsive Fixes === */
 @media (max-width: 900px) {
   .navbar {

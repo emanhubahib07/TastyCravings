@@ -54,7 +54,7 @@ body {
   border-radius: 20px;
 }
 
-/* Home Section */
+/* dito home */
 #Home {
   height: 100vh;
   width: 100%;
@@ -72,30 +72,40 @@ body {
   font-family: cursive;
   margin-bottom: 10px;
   opacity: 0;
-  transform: scale(0.5);
-  animation: slidePop 1s ease forwards;
-  animation-delay: 0.4s;
+    transform: scale(0.5);
+    animation: slidePop 1s ease forwards;
+    animation-delay: 0.4s;
 }
+@keyframes slidePop{
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 
 .sub-title {
   font-size: 1.2rem;
   color: #03c544;
   margin-bottom: 20px;
   opacity: 0;
-  transform: scale(0.5);
-  animation: slidePop 1s ease forwards;
-  animation-delay: 0.8s; /* Adjusted delay to stagger animations */
-}
-
-@keyframes slidePop {
-  from {
-    opacity: 0;
     transform: scale(0.5);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+    animation: slidePop 1s ease forwards;
+    animation-delay: 0.4s;
+}
+@keyframes slidePop{
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .menu-button {
@@ -117,7 +127,7 @@ body {
   transform: translateY(-3px);
 }
 
-/* Promotional Section */
+/* Nandito Promotional Section */
 #Promotional {
   height: 100vh;
   background-color: #9ec188;
@@ -143,7 +153,7 @@ video {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Menu Section */
+/* Nandito Menu Section */
 #Menu {
   background: #5e914b;
   padding: 60px 20px;
@@ -224,7 +234,6 @@ video {
   line-height: 1.4;
 }
 
-/* Customer Reviews Section */
 .Customer-reviews {
   padding: 80px 10%;
   background-color: #fefffe;
@@ -254,9 +263,9 @@ video {
 .Customer-image-grid {
   flex: 1.5;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 25px;
-  justify-items: end;
+  grid-template-columns: repeat(2, 1fr); 
+  grid-gap: 25px; 
+  justify-items: end; 
   box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);
   padding: 10px;
   border-radius: 12px;
@@ -275,7 +284,7 @@ video {
   transform: scale(1.05);
 }
 
-/* Information Section */
+/* Nandito Information Section */
 .Information {
   padding: 60px 10%;
   background-color: #cce8b7;
@@ -285,7 +294,7 @@ video {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
   gap: 40px;
 }
 
@@ -309,7 +318,7 @@ video {
 }
 
 .Information-name {
-  color: #fa7aaf;
+  color: #fa7aaf; 
   font-weight: 700;
 }
 
@@ -319,7 +328,6 @@ video {
   font-size: 1rem;
 }
 
-/* Why Choose Us Section */
 #WhyChooseUs {
   height: 100vh;
   width: 100%;
@@ -344,7 +352,7 @@ video {
 }
 
 .card {
-  background: rgb(226, 231, 226);
+  background: rgb(226, 231, 226) ;
   padding: 20px;
   border-radius: 12px;
   border: 2px solid rgb(226, 231, 226);
@@ -357,8 +365,7 @@ video {
   margin-bottom: 10px;
 }
 
-/* Contact Section */
-#Contact {
+#Contact{
   height: 100vh;
   width: 100%;
   background-color: #fdfdfc;
@@ -370,7 +377,7 @@ video {
   text-align: center;
 }
 
-.Contact-Intro {
+.Contact-Intro{
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -379,7 +386,7 @@ video {
   display: flex;
   align-items: center;
   text-align: center;
-  gap: 50px;
+  gap: 50px; 
   margin-top: 40px;
 }
 
@@ -405,7 +412,6 @@ video {
   text-decoration: underline;
 }
 
-/* Footer */
 #Footer {
   height: 10vh;
   width: 100%;
@@ -418,71 +424,185 @@ video {
   text-align: center;
 }
 
-.Footer-message {
+.Footer-message{
   font-family: Arial, Helvetica, sans-serif;
   font-size: small;
 }
 
-/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
 
-/* Small phones (up to 480px) - covers most Android phones */
-@media (max-width: 480px) {
+  .navbar-right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .navbar-right a {
+    margin: 5px;
+    font-size: 14px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  /* Home Section */
+  #Home {
+    padding: 20px;
+  }
+
   .main-title {
     font-size: 1.8rem;
+  }
+
+  .sub-title {
+    font-size: 1rem;
+  }
+
+  .menu-button {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+  }
+
+  /* Promotional Section */
+  #Promotional {
+    padding: 20px;
+    height: auto;
+  }
+
+  video {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  /* Menu Section */
+  .menu-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .menu-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .menu-info {
+    text-align: center;
+  }
+
+  .menu-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Customer Reviews */
+  .Customer-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .Customer-image-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .Customer-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Information Section */
+  .Information-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Information-image img {
+    width: 100%;
+  }
+
+  .Information-text h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .Information-text p {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  /* Why Choose Us */
+  #WhyChooseUs {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  /* Contact Section */
+  #Contact {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .Contact-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .Contact-item {
+    font-size: 0.9rem;
+  }
+
+  /* Footer */
+  #Footer {
+    height: auto;
+    padding: 15px;
+  }
+
+  .Footer-message {
+    font-size: 0.8rem;
+  }
+}
+
+/* 🔹 Extra small screens (phones <480px) */
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 1.5rem;
   }
 
   .sub-title {
     font-size: 0.9rem;
   }
 
-  .menu-button {
-    padding: 8px 16px;
-    font-size: 0.8rem;
-  }
-
-  .Title-promo {
-    font-size: 18px;
-  }
-
-  #Menu h2 {
-    font-size: 1.3rem;
-  }
-
   .menu-card img {
-    width: 120px;
-    height: 120px;
-  }
-
-  .Customer-reviews-front h2 {
-    font-size: 24px;
-  }
-
-  .Information-text h1 {
-    font-size: 1.3rem;
+    height: 180px;
   }
 
   .card {
+    width: 100%;
     padding: 15px;
   }
 
-  .Contact-item {
-    font-size: 11px;
-  }
-}
-
-/* Additional Android-specific adjustments: Ensure touch-friendly targets and handle landscape orientation */
-@media (max-width: 768px) and (orientation: landscape) {
-  /* For landscape on tablets/phones, reduce padding to fit more content */
-  #Home, #Promotional, #WhyChooseUs, #Contact {
-    padding: 30px 10px;
-  }
-
   .menu-button {
-    padding: 10px 18px;
-  }
-
-  .card {
-    width: 180px; /* Slightly smaller for landscape */
+    width: 100%;
+    max-width: 250px;
   }
 }
 

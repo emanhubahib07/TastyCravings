@@ -57,7 +57,7 @@ body {
 /* dito home */
 #Home {
   height: 100vh;
-  width: 100%;
+  width: 80%;
   background-color: #f3f8f3;
   display: flex;
   flex-direction: column;

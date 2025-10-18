@@ -246,9 +246,10 @@ video {
 
 /* CUSTOMER REVIEWS */
 .Customer-reviews {
-  padding: 80px 5%;
+  padding: 80px 10%;
   background-color: #fefffe;
   width: 100%; /* FIXED */
+  box-sizing: border-box;
   overflow-x: hidden;
 }
 
@@ -258,6 +259,14 @@ video {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 60px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.Customer-reviews-front {
+  flex: 1;
+  min-width: 280px;
 }
 
 .Customer-reviews-front h2 {
@@ -269,18 +278,22 @@ video {
 .Customer-image-grid {
   flex: 1.5;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 25px;
   justify-items: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  padding: 10px;
-  border-radius: 12px;
+  align-items: center;
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .Customer-image img {
   width: 100%;
-  max-width: 280px;
-  height: 180px;
+  max-width: 350px;
+  height: auto;
   border-radius: 15px;
   object-fit: cover;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
@@ -424,11 +437,6 @@ video {
     flex-direction: column;
     align-items: flex-start;
   }
-
-  .menu-toggle {
-    display: block;
-  }
-
   .navbar-right {
     display: none;
     flex-direction: column;
@@ -485,6 +493,88 @@ video {
   .Information-image img {
     width: 100%;
     max-width: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Customer-reviews {
+    padding: 40px 5%;
+  }
+
+  .Customer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .Customer-image-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .Customer-image img {
+    max-width: 280px;
+  }
+
+  .Customer-reviews-front h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Customer-image img {
+    max-width: 240px;
+  }
+
+  .Customer-reviews-front h2 {
+    font-size: 26px;
+  }
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #0f990f;
+}
+
+/* Show sa mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .navbar-right {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #ffffff;
+    text-align: left;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+  }
+
+  .navbar-right.active {
+    display: flex;
+  }
+
+  .navbar-right a {
+    padding: 10px 20px;
+    display: block;
+    margin: 5px 0;
+    color: #0f990f;
+  }
+
+  .navbar-right a:hover {
+    background: #41f878;
+    color: white;
+    border-radius: 8px;
   }
 }
 

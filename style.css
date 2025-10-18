@@ -291,9 +291,8 @@ video {
 }
 
 .Customer-image img {
-  width: 100%;
-  max-width: 350px;
-  height: auto;
+  width: 280px;
+  height: 180px;
   border-radius: 15px;
   object-fit: cover;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);

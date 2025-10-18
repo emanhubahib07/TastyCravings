@@ -113,6 +113,22 @@ body {
   background-color: #41f878;
   transform: translateY(-3px);
 }
+
+#Promotional {
+  height: 100vh;
+  background-color: #9ec188;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.Title-promo {
+  font-family: cursive;
+  font-size: 25px;
+  color: #fa7aaf;
+  margin-bottom: 20px;
+}
 video {
   width: 90%;
   max-width: 900px;

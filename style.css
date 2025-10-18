@@ -8,9 +8,11 @@ html {
 
 body {
   margin: 0;
+  padding: 0;
   font-family: "Poppins", Arial, sans-serif;
   background: #2d5128;
   color: #333;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 

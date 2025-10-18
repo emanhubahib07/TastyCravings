@@ -25,7 +25,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 10;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
 }
 
@@ -44,10 +44,12 @@ body {
   width: auto;
 }
 
+/* Navbar Links */
 .navbar-right {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  align-items: center;
   gap: 10px;
 }
 
@@ -77,7 +79,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 60px 20px;
+  padding: 80px 20px;
 }
 
 .main-title {
@@ -114,21 +116,25 @@ body {
   transform: translateY(-3px);
 }
 
+/* === Promotional Section === */
 #Promotional {
-  height: 100vh;
+  width: 100%;
   background-color: #9ec188;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 60px 20px;
 }
+
 .Title-promo {
   font-family: cursive;
   font-size: 25px;
   color: #fa7aaf;
   margin-bottom: 20px;
 }
+
 video {
   width: 90%;
   max-width: 900px;
@@ -136,6 +142,7 @@ video {
   border-radius: 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
+
 /* === Responsive Fixes === */
 @media (max-width: 900px) {
   .navbar {
@@ -147,6 +154,7 @@ video {
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
+    margin-top: 10px;
   }
 
   .navbar-right a {
@@ -157,7 +165,7 @@ video {
 
   #Home {
     min-height: auto;
-    padding: 80px 20px;
+    padding: 60px 20px;
   }
 
   .main-title {
@@ -166,6 +174,14 @@ video {
 
   .sub-title {
     font-size: 1rem;
+  }
+
+  #Promotional {
+    padding: 40px 20px;
+  }
+
+  .Title-promo {
+    font-size: 22px;
   }
 }
 
@@ -179,7 +195,7 @@ video {
   }
 
   .main-title {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   .sub-title {
@@ -191,13 +207,15 @@ video {
     font-size: 0.9rem;
   }
 
-  video, img {
+  video,
+  img {
     width: 100%;
     height: auto;
     border-radius: 12px;
   }
 }
 
+/* === Animations === */
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.9); }
   to { opacity: 1; transform: scale(1); }

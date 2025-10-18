@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasty Cravings</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Dito yung Navbar -->
+  <nav class="navbar">
+    <div class="navbar-left">
+      <div class="logo">
+        <span>Tasty Cravings</span>
+        <img src="cropped_circle_image.png" alt="Logo">
+      </div>
+    </div>
+    <div class="navbar-right">
+      <a href="#Home" class="active">Home</a>
+      <a href="#Menu">Menu</a>
+      <a href="#Contact">Contact</a>
+      <a href="#WhyChooseUs">Why Choose Us</a>
+    </div>
+  </nav>
+
+  <!-- Nandito Home Section -->
+  <section id="Home">
+    <h1 class="main-title">Welcome to Tasty Cravings</h1>
+    <p class="sub-title">Eat, Explore, Enjoy</p>
+   <a href="#Menu"> <button class="menu-button">Check our Menu</button> </a>
+  </section>
+
+      <script>
+    const navLinks = document.querySelectorAll(".nav-links a");
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            const targetId = link.getAttribute("href");
+            const targetSection = document.querySelector(targetId);
+            if (targetSection) {
+                const aniElements = targetSection.querySelectorAll(".pop, .left, .right");
+                aniElements.forEach(el => {
+                    el.style.animation = "none";
+                    void el.offsetWidth; // Forces reflow
+                    el.style.animation = ""; // Resets animation
+                });
+            }
+        });
+    });
+</script>
+
+  <!-- Nandito Promotional Video Section -->
+  <section id="Promotional">
+    <h3 class="Title-promo"><b></b></h3>
+    <video autoplay muted loop playsinline>
+      <source src="1015 (1).mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <!-- Nandito MENU SECTION -->
+  <section id="Menu">
+    <h2>Our Menu</h2>
+    <p>Discover a variety of meals made with love and the freshest ingredients.</p>
+
+    <div class="menu-section">
+      <div class="menu-card">
+        <img src="c:\Users\ADMIN\Downloads\518563697_122229231206087860_7518975239047384195_n.jpg" alt="Fresh Lumpia/Lumpiang Sariwa">
+        <div class="menu-info">
+          <div class="menu-header">
+            <h3>Fresh Lumpia/Lumpiang Sariwa</h3>
+            <span class="price">35 pesos</span>
+          </div>
+          <p>
+           Fresh lumpia with Fresh Garlic, Peanut Sauce,<br>
+           Egg Wrapper And Lettuce.
+          </p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img src="958a2983e1761003acf6fb8ee58ab336.jpg" alt="Peanut Butter">
+        <div class="menu-info">
+          <div class="menu-header">
+            <h3> Authentic Peanut Butter </h3>
+            <span class="price">Out of Stock</span>
+          </div>
+          <p>
+            Enjoy the creamy, natural goodness of our 
+            peanut butter packed with protein and no added sugars.
+            Pure, delicious fuel!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dito Customer reviews -->
+   <section class="Customer-reviews">
+  <div class="Customer-container">
+    <div class="Customer-reviews-front">
+      <h2>What Our <br> Customer Says</h2>
+      <p>We Appreciate All the Feedback | Reviews </p>
+    </div>
+    <div class="Customer-image-grid">
+      <div class="Customer-image">
+        <img src="471483605_122198184290087860_7834673097736893786_n.jpg" alt="Customer Review">
+      </div>
+      <div class="Customer-image">
+        <img src="471595685_122198183966087860_3658035522510121705_n.jpg" alt="Customer Review">
+      </div>
+      <div class="Customer-image">
+        <img src="471618603_122198184164087860_2841276346673911969_n.jpg" alt="Customer Review">
+      </div>
+      <div class="Customer-image">
+        <img src="471546820_122198184446087860_1190312139340513731_n.jpg" alt="Customer Review">
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Dito Info -->
+   <section class="Information">
+    <div class="Information-container">
+     <div class="Information-image">
+      <img src="395434076_122106944306087860_3873994600394539788_n.jpg" alt="Tasty Cravings Logo">
+     </div> 
+     <div class="Information-text">
+      <h1><span class="Information-name"> Tasty Cravings </span> | Fresh Lumpiang Sariwa </h1>
+      <p>
+       Welcome to <strong> Tasty Cravings </strong>
+      </p>
+      <p>
+        Our <strong>Mission</strong> is to provide high-quality, hand-crafted Lumpiang Sariwa made from fresh, 
+        locally-sourced ingredients, delivering a taste of Filipino comfort food 
+        that’s both nutritious and irresistible. 
+      </p>
+      <p>
+        Our <strong>Vision</strong> to be the go-to brand for delicious, fresh, and authentic Lumpiang Sariwa, 
+        bringing people together with healthy, flavorful Filipino traditions, one wrap at a time.
+      </p>
+        </div>
+    </div>
+   </section>
+
+  <!-- Dito Why Choose Us  -->
+  <section id="WhyChooseUs">
+    <h2>Why Choose Us</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>Friendly Staff</h3>
+        <p>Grabe Sobrang bait ng bantay dito!!</p>
+      </div>
+      <div class="card">
+        <h3>Fresh and Healthy</h3>
+        <p>We focus on quality with every wrap, 
+          offering a delicious and nutritious 
+          street food option that’s both light and satisfying.</p>
+      </div>
+      <div class="card">
+        <h3>Convenient and Delicious</h3>
+        <p>Grab a quick, tasty, and authentic meal on the go—perfect 
+           for anyone craving a healthy, flavorful snack.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nandito Contact Section -->
+  <section id="Contact">
+    <div class="Contact-Intro">
+      <h1><b>How can we help you?</b></h1>
+      <p>Want to Order, comment, or suggestion?</p>
+      <p>We love to hear it from you</p>
+    </div>
+
+   <div class="Contact-container">
+    <div class="Contact-item">
+      <i class="fab fa-facebook-f"></i>
+      <span>Facebook: <a href="https://www.facebook.com/tastycravingslumpiangsariwa/about"><br>Tasty Cravings</a></span>
+    </div>
+
+    <div class="Contact-item">
+      <i class="fas fa-envelope"></i>
+      <span>Email: <a href="mailto:arnielnikepo2@gmail.com">arnielnikepo2@gmail.com</a></span>
+    </div>
+
+    <div class="Contact-item">
+      <i class="fas fa-phone"></i>
+      <span>Call: <a href="tel:+94 741 8480">0994 741 8480</a></span>
+    </div>
+  </div>
+  </section>
+
+  <!--Dito Footer-->
+  <section id="Footer">
+    <div class="Footer-message">
+      <p>© 2023 Tasty Cravings. All rights reserved.</p>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,3 +1,10 @@
+/* ----------------------------
+   Global Reset & Base Styles
+-----------------------------*/
+* {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -10,6 +17,14 @@ body {
   scroll-behavior: smooth;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ----------------------------
+   Navbar
+-----------------------------*/
 .navbar {
   background: #ffffff;
   padding: 15px 40px;
@@ -54,7 +69,17 @@ body {
   border-radius: 20px;
 }
 
-/* dito home */
+/* Hamburger Menu Toggle */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #0f990f;
+}
+
+/* ----------------------------
+   Home Section
+-----------------------------*/
 #Home {
   height: 100vh;
   width: 100%;
@@ -72,40 +97,31 @@ body {
   font-family: cursive;
   margin-bottom: 10px;
   opacity: 0;
-    transform: scale(0.5);
-    animation: slidePop 1s ease forwards;
-    animation-delay: 0.4s;
+  transform: scale(0.5);
+  animation: slidePop 1s ease forwards;
+  animation-delay: 0.4s;
 }
-@keyframes slidePop{
-    from {
-        opacity: 0;
-        transform: scale(0.5);
-    }
-    to{
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
 
 .sub-title {
   font-size: 1.2rem;
   color: #03c544;
   margin-bottom: 20px;
   opacity: 0;
-    transform: scale(0.5);
-    animation: slidePop 1s ease forwards;
-    animation-delay: 0.4s;
+  transform: scale(0.5);
+  animation: slidePop 1s ease forwards;
+  animation-delay: 0.4s;
 }
-@keyframes slidePop{
-    from {
-        opacity: 0;
-        transform: scale(0.5);
-    }
-    to{
-        opacity: 1;
-        transform: scale(1);
-    }
+
+/* Animation */
+@keyframes slidePop {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .menu-button {
@@ -127,7 +143,9 @@ body {
   transform: translateY(-3px);
 }
 
-/* Nandito Promotional Section */
+/* ----------------------------
+   Promotional Section
+-----------------------------*/
 #Promotional {
   height: 100vh;
   background-color: #9ec188;
@@ -153,7 +171,9 @@ video {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Nandito Menu Section */
+/* ----------------------------
+   Menu Section
+-----------------------------*/
 #Menu {
   background: #5e914b;
   padding: 60px 20px;
@@ -234,6 +254,9 @@ video {
   line-height: 1.4;
 }
 
+/* ----------------------------
+   Customer Reviews
+-----------------------------*/
 .Customer-reviews {
   padding: 80px 10%;
   background-color: #fefffe;
@@ -248,12 +271,6 @@ video {
   gap: 60px;
 }
 
-.Customer-reviews-front {
-  flex: 1;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #070003;
-}
-
 .Customer-reviews-front h2 {
   font-size: 42px;
   font-weight: bold;
@@ -263,9 +280,9 @@ video {
 .Customer-image-grid {
   flex: 1.5;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); 
-  grid-gap: 25px; 
-  justify-items: end; 
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 25px;
+  justify-items: end;
   box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);
   padding: 10px;
   border-radius: 12px;
@@ -284,7 +301,9 @@ video {
   transform: scale(1.05);
 }
 
-/* Nandito Information Section */
+/* ----------------------------
+   Information Section
+-----------------------------*/
 .Information {
   padding: 60px 10%;
   background-color: #cce8b7;
@@ -294,7 +313,7 @@ video {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   gap: 40px;
 }
 
@@ -306,11 +325,6 @@ video {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
-.Information-text {
-  flex: 1;
-  min-width: 300px;
-}
-
 .Information-text h1 {
   font-size: 1.9rem;
   color: #5e914b;
@@ -318,16 +332,13 @@ video {
 }
 
 .Information-name {
-  color: #fa7aaf; 
+  color: #fa7aaf;
   font-weight: 700;
 }
 
-.Information-text p {
-  margin-bottom: 15px;
-  color: #444;
-  font-size: 1rem;
-}
-
+/* ----------------------------
+   Why Choose Us Section
+-----------------------------*/
 #WhyChooseUs {
   height: 100vh;
   width: 100%;
@@ -352,10 +363,9 @@ video {
 }
 
 .card {
-  background: rgb(226, 231, 226) ;
+  background: rgb(226, 231, 226);
   padding: 20px;
   border-radius: 12px;
-  border: 2px solid rgb(226, 231, 226);
   width: 220px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -365,7 +375,10 @@ video {
   margin-bottom: 10px;
 }
 
-#Contact{
+/* ----------------------------
+   Contact Section
+-----------------------------*/
+#Contact {
   height: 100vh;
   width: 100%;
   background-color: #fdfdfc;
@@ -377,16 +390,11 @@ video {
   text-align: center;
 }
 
-.Contact-Intro{
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 .Contact-container {
   display: flex;
   align-items: center;
   text-align: center;
-  gap: 50px; 
+  gap: 50px;
   margin-top: 40px;
 }
 
@@ -403,15 +411,9 @@ video {
   margin-bottom: 8px;
 }
 
-.Contact-item a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.Contact-item a:hover {
-  text-decoration: underline;
-}
-
+/* ----------------------------
+   Footer
+-----------------------------*/
 #Footer {
   height: 10vh;
   width: 100%;
@@ -424,38 +426,42 @@ video {
   text-align: center;
 }
 
-.Footer-message{
+.Footer-message {
   font-family: Arial, Helvetica, sans-serif;
   font-size: small;
 }
 
-/* Mobile Media Queries */
+/* ----------------------------
+   Responsive Design
+-----------------------------*/
 @media (max-width: 768px) {
-  /* Navbar adjustments */
   .navbar {
     padding: 10px 20px;
     flex-direction: column;
     align-items: flex-start;
   }
 
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar-right {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-right.active {
+    display: flex;
+  }
+
   .logo {
     font-size: 18px;
   }
 
-  .navbar-right {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  .navbar-right a {
-    margin: 5px 0;
-    font-size: 14px;
-  }
-
-  /* Home section adjustments */
-  #Home {
+  #Home,
+  #Promotional,
+  #Contact {
     height: auto;
     padding: 50px 20px;
   }
@@ -473,31 +479,10 @@ video {
     font-size: 0.9rem;
   }
 
-  /* Promotional section adjustments */
-  #Promotional {
-    height: auto;
-    padding: 50px 20px;
-  }
-
-  video {
-    width: 100%;
-    max-width: none;
-  }
-
-  /* Menu section adjustments */
-  #Menu {
-    padding: 40px 20px;
-  }
-
-  #Menu h2 {
-    font-size: 1.8rem;
-  }
-
   .menu-card {
     flex-direction: column;
     text-align: center;
     padding: 15px;
-    gap: 15px;
   }
 
   .menu-card img {
@@ -505,16 +490,6 @@ video {
     height: 150px;
   }
 
-  .menu-info {
-    text-align: center;
-  }
-
-  .menu-header {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  /* Customer reviews adjustments */
   .Customer-reviews {
     padding: 40px 5%;
     width: 90%;
@@ -525,43 +500,14 @@ video {
     gap: 30px;
   }
 
-  .Customer-reviews-front h2 {
-    font-size: 32px;
-  }
-
   .Customer-image-grid {
     grid-template-columns: 1fr;
     justify-items: center;
   }
 
-  .Customer-image img {
-    width: 100%;
-    max-width: 280px;
-  }
-
-  /* Information section adjustments */
-  .Information {
-    padding: 40px 5%;
-  }
-
   .Information-container {
     flex-direction: column;
     text-align: center;
-  }
-
-  .Information-image img {
-    width: 100%;
-    max-width: 300px;
-  }
-
-  .Information-text h1 {
-    font-size: 1.5rem;
-  }
-
-  /* Why Choose Us adjustments */
-  #WhyChooseUs {
-    height: auto;
-    padding: 50px 20px;
   }
 
   .card-container {
@@ -574,28 +520,37 @@ video {
     max-width: 300px;
   }
 
-  /* Contact section adjustments */
-  #Contact {
-    height: auto;
-    padding: 50px 20px;
-  }
-
   .Contact-container {
     flex-direction: column;
     gap: 30px;
   }
 
-  .Contact-item {
-    font-size: 16px;
-  }
-
-  .Contact-item i {
-    font-size: 24px;
-  }
-
-  /* Footer adjustments */
   #Footer {
     height: auto;
     padding: 20px;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 1.6rem;
+  }
+
+  .sub-title {
+    font-size: 0.9rem;
+  }
+
+  .menu-card img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .Customer-image img {
+    max-width: 220px;
+  }
+
+  .card {
+    max-width: 260px;
   }
 }

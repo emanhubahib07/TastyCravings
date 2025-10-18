@@ -429,36 +429,39 @@ video {
   font-size: small;
 }
 
+/* Mobile Media Queries */
 @media (max-width: 768px) {
-  /* Navbar */
+  /* Navbar adjustments */
   .navbar {
-    flex-direction: column;
     padding: 10px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    font-size: 18px;
   }
 
   .navbar-right {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    width: 100%;
     margin-top: 10px;
   }
 
   .navbar-right a {
-    margin: 5px;
+    margin: 5px 0;
     font-size: 14px;
   }
 
-  .logo {
-    font-size: 20px;
-  }
-
-  /* Home Section */
+  /* Home section adjustments */
   #Home {
-    padding: 20px;
+    height: auto;
+    padding: 50px 20px;
   }
 
   .main-title {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   .sub-title {
@@ -466,32 +469,40 @@ video {
   }
 
   .menu-button {
-    padding: 10px 24px;
+    padding: 10px 20px;
     font-size: 0.9rem;
   }
 
-  /* Promotional Section */
+  /* Promotional section adjustments */
   #Promotional {
-    padding: 20px;
     height: auto;
+    padding: 50px 20px;
   }
 
   video {
     width: 100%;
-    max-width: 100%;
-    border-radius: 12px;
+    max-width: none;
   }
 
-  /* Menu Section */
+  /* Menu section adjustments */
+  #Menu {
+    padding: 40px 20px;
+  }
+
+  #Menu h2 {
+    font-size: 1.8rem;
+  }
+
   .menu-card {
     flex-direction: column;
     text-align: center;
     padding: 15px;
+    gap: 15px;
   }
 
   .menu-card img {
-    width: 100%;
-    height: auto;
+    width: 150px;
+    height: 150px;
   }
 
   .menu-info {
@@ -503,10 +514,19 @@ video {
     gap: 10px;
   }
 
-  /* Customer Reviews */
+  /* Customer reviews adjustments */
+  .Customer-reviews {
+    padding: 40px 5%;
+    width: 90%;
+  }
+
   .Customer-container {
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
+  }
+
+  .Customer-reviews-front h2 {
+    font-size: 32px;
   }
 
   .Customer-image-grid {
@@ -516,49 +536,48 @@ video {
 
   .Customer-image img {
     width: 100%;
-    height: auto;
+    max-width: 280px;
   }
 
-  /* Information Section */
+  /* Information section adjustments */
+  .Information {
+    padding: 40px 5%;
+  }
+
   .Information-container {
     flex-direction: column;
-    align-items: center;
+    text-align: center;
   }
 
   .Information-image img {
     width: 100%;
+    max-width: 300px;
   }
 
   .Information-text h1 {
     font-size: 1.5rem;
-    text-align: center;
   }
 
-  .Information-text p {
-    font-size: 0.95rem;
-    text-align: center;
-  }
-
-  /* Why Choose Us */
+  /* Why Choose Us adjustments */
   #WhyChooseUs {
     height: auto;
-    padding: 40px 20px;
+    padding: 50px 20px;
   }
 
   .card-container {
     flex-direction: column;
     align-items: center;
-    padding: 20px;
   }
 
   .card {
-    width: 90%;
+    width: 100%;
+    max-width: 300px;
   }
 
-  /* Contact Section */
+  /* Contact section adjustments */
   #Contact {
     height: auto;
-    padding: 40px 20px;
+    padding: 50px 20px;
   }
 
   .Contact-container {
@@ -567,42 +586,16 @@ video {
   }
 
   .Contact-item {
-    font-size: 0.9rem;
+    font-size: 16px;
   }
 
-  /* Footer */
+  .Contact-item i {
+    font-size: 24px;
+  }
+
+  /* Footer adjustments */
   #Footer {
     height: auto;
-    padding: 15px;
-  }
-
-  .Footer-message {
-    font-size: 0.8rem;
+    padding: 20px;
   }
 }
-
-/* 🔹 Extra small screens (phones <480px) */
-@media (max-width: 480px) {
-  .main-title {
-    font-size: 1.5rem;
-  }
-
-  .sub-title {
-    font-size: 0.9rem;
-  }
-
-  .menu-card img {
-    height: 180px;
-  }
-
-  .card {
-    width: 100%;
-    padding: 15px;
-  }
-
-  .menu-button {
-    width: 100%;
-    max-width: 250px;
-  }
-}
-

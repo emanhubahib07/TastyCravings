@@ -302,14 +302,15 @@ video {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 40px;
 }
 
 .Information-image img {
-  width: 450px;
+  width: 400px;
   max-width: 100%;
   border-radius: 15px;
+  flex-shrink: 0;
   object-fit: cover;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
@@ -474,3 +475,16 @@ video {
     font-size: 0.9rem;
   }
 }
+
+@media (max-width: 768px) {
+  .Information-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .Information-image img {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+

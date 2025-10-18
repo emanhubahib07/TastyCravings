@@ -623,4 +623,21 @@ video {
   }
 }
 
+@media (max-width: 768px) {
+  .Contact-container {
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+  }
+
+  .Contact-item {
+    width: 100%; 
+    justify-content: center; 
+  }
+
+  .Contact-item i {
+    font-size: 18px; 
+  }
+}
+
 
